@@ -2,15 +2,29 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "empty_quarto_website",
+    "title": "This is the website for the workshop",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Exploratory analysis",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n\nCode\n# Read the data\n\nmir <- read.table(\"lab/data/miRNA-421x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nrna <- read.table(\"lab/data/mRNA-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nprt <- read.table(\"lab/data/prot-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\n\n# Convert to matrix format\n\nmir <- as.matrix(mir)\nrna <- as.matrix(rna)\nprt <- as.matrix(prt)\n\n# Have a look at the data to see if it looks ok\n\nmir[1:4, 1:4]\n\n\n            OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nhsa-let-7a      -1.10330      0.40033     -0.65364      0.78277\nhsa-let-7a*     -0.58049     -0.72246      1.46023     -0.67980\nhsa-let-7b      -3.17134      0.41602     -0.13054      1.11872\nhsa-let-7c      -3.10923      0.27861     -0.17365      0.47395\n\n\nCode\nrna[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      1.60034     -0.49087     -0.26553     -0.27857\nANXA1     -2.42501     -0.05416     -0.46478     -2.18393\nAR         0.39615     -0.43348     -0.10232      0.58299\nBAK1       0.78627      0.39897      0.22598     -1.31202\n\n\nCode\nprt[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      0.48181     -0.76244      0.22878      0.02493\nANXA1     -0.37323      0.52558      0.73313     -1.60107\nAR         1.39394     -0.33711      0.07152      1.51886\nBAK1       1.44828      1.26768     -0.32807      1.41299"
+  },
+  {
+    "objectID": "about.html#meet-the-penguins",
+    "href": "about.html#meet-the-penguins",
+    "title": "Penguins, meet Quarto!",
+    "section": "Meet the penguins",
+    "text": "Meet the penguins\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "about.html#meet-quarto",
+    "href": "about.html#meet-quarto",
+    "title": "Penguins, meet Quarto!",
+    "section": "Meet Quarto",
+    "text": "Meet Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n\nCode\n# Read the data\n\nmir <- read.table(\"lab/data/miRNA-421x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nrna <- read.table(\"lab/data/mRNA-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nprt <- read.table(\"lab/data/prot-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\n\n# Convert to matrix format\n\nmir <- as.matrix(mir)\nrna <- as.matrix(rna)\nprt <- as.matrix(prt)\n\n# Have a look at the data to see if it looks ok\n\nmir[1:4, 1:4]\n\n\n            OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nhsa-let-7a      -1.10330      0.40033     -0.65364      0.78277\nhsa-let-7a*     -0.58049     -0.72246      1.46023     -0.67980\nhsa-let-7b      -3.17134      0.41602     -0.13054      1.11872\nhsa-let-7c      -3.10923      0.27861     -0.17365      0.47395\n\n\nCode\nrna[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      1.60034     -0.49087     -0.26553     -0.27857\nANXA1     -2.42501     -0.05416     -0.46478     -2.18393\nAR         0.39615     -0.43348     -0.10232      0.58299\nBAK1       0.78627      0.39897      0.22598     -1.31202\n\n\nCode\nprt[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      0.48181     -0.76244      0.22878      0.02493\nANXA1     -0.37323      0.52558      0.73313     -1.60107\nAR         1.39394     -0.33711      0.07152      1.51886\nBAK1       1.44828      1.26768     -0.32807      1.41299"
   }
 ]

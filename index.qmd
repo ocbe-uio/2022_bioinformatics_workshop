@@ -1,11 +1,7 @@
 ---
-title: "empty_quarto_website"
+title: "This is the website for the workshop"
 ---
 
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
