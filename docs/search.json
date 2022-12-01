@@ -2,29 +2,71 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "This is the website for the workshop",
+    "title": "Statistical Principles in Machine Learning for Small Biomedical Data",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Date: Tuesday 13 December 2022, 9:00-12:00\nRoom: Python (room 2269), Ole-Johan Dahls hus (OJD)\nInstructors: Manuela Zucknick (main), Theophilus Asenso and Chi Zhang\n\n\nWelcome!\n\nThe goal of the workshop is to introduce kep concepts in machine learning, such as regularisation.\nThe workshop is intended for students and researchers who are interested in applying machine learning methods to small data (few samples, but potentially many features) or noisy data (e.g. biomedical data)\nWorkshop material can be found in the workshop github repository.\n\n\nLearning Objectives\nAt the end of the tutorial, participants will be able to\n\nunderstand key concepts for training machine learning models such as regularisation;\nunderstand how to incorporate data structure in the regularisation process.\n\n\n\nPre-requisites\n\nBasic familiarity with R\nIntroductory level statistics, including regression\n\n\n\n\nSchedule\n\n\n\nTime\nTopic\nPresenter\n\n\n\n\n9:00 - 10:00\nSession 1: Introduction\nManuela Zucknick\n\n\n10:15 - 11:00\nSession 2: lab\nManuela Zucknick\n\n\n11:15 - 12:00\nSession 3: lab\nManuela Zucknick"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Exploratory analysis",
+    "objectID": "part1_eda.html",
+    "href": "part1_eda.html",
+    "title": "Part 1: Exploratory analysis",
     "section": "",
     "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n\nCode\n# Read the data\n\nmir <- read.table(\"lab/data/miRNA-421x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nrna <- read.table(\"lab/data/mRNA-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nprt <- read.table(\"lab/data/prot-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\n\n# Convert to matrix format\n\nmir <- as.matrix(mir)\nrna <- as.matrix(rna)\nprt <- as.matrix(prt)\n\n# Have a look at the data to see if it looks ok\n\nmir[1:4, 1:4]\n\n\n            OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nhsa-let-7a      -1.10330      0.40033     -0.65364      0.78277\nhsa-let-7a*     -0.58049     -0.72246      1.46023     -0.67980\nhsa-let-7b      -3.17134      0.41602     -0.13054      1.11872\nhsa-let-7c      -3.10923      0.27861     -0.17365      0.47395\n\n\nCode\nrna[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      1.60034     -0.49087     -0.26553     -0.27857\nANXA1     -2.42501     -0.05416     -0.46478     -2.18393\nAR         0.39615     -0.43348     -0.10232      0.58299\nBAK1       0.78627      0.39897      0.22598     -1.31202\n\n\nCode\nprt[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      0.48181     -0.76244      0.22878      0.02493\nANXA1     -0.37323      0.52558      0.73313     -1.60107\nAR         1.39394     -0.33711      0.07152      1.51886\nBAK1       1.44828      1.26768     -0.32807      1.41299"
   },
   {
-    "objectID": "about.html#meet-the-penguins",
-    "href": "about.html#meet-the-penguins",
-    "title": "Penguins, meet Quarto!",
-    "section": "Meet the penguins",
-    "text": "Meet the penguins\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()"
+    "objectID": "part2_model.html",
+    "href": "part2_model.html",
+    "title": "Part 2: Model",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n\nCode\n# Read the data\n\nmir <- read.table(\"lab/data/miRNA-421x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nrna <- read.table(\"lab/data/mRNA-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nprt <- read.table(\"lab/data/prot-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\n\n# Convert to matrix format\n\nmir <- as.matrix(mir)\nrna <- as.matrix(rna)\nprt <- as.matrix(prt)\n\n# Have a look at the data to see if it looks ok\n\nmir[1:4, 1:4]\n\n\n            OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nhsa-let-7a      -1.10330      0.40033     -0.65364      0.78277\nhsa-let-7a*     -0.58049     -0.72246      1.46023     -0.67980\nhsa-let-7b      -3.17134      0.41602     -0.13054      1.11872\nhsa-let-7c      -3.10923      0.27861     -0.17365      0.47395\n\n\nCode\nrna[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      1.60034     -0.49087     -0.26553     -0.27857\nANXA1     -2.42501     -0.05416     -0.46478     -2.18393\nAR         0.39615     -0.43348     -0.10232      0.58299\nBAK1       0.78627      0.39897      0.22598     -1.31202\n\n\nCode\nprt[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      0.48181     -0.76244      0.22878      0.02493\nANXA1     -0.37323      0.52558      0.73313     -1.60107\nAR         1.39394     -0.33711      0.07152      1.51886\nBAK1       1.44828      1.26768     -0.32807      1.41299"
   },
   {
-    "objectID": "about.html#meet-quarto",
-    "href": "about.html#meet-quarto",
-    "title": "Penguins, meet Quarto!",
-    "section": "Meet Quarto",
-    "text": "Meet Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n\nCode\n# Read the data\n\nmir <- read.table(\"lab/data/miRNA-421x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nrna <- read.table(\"lab/data/mRNA-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\nprt <- read.table(\"lab/data/prot-100x282.txt\", header=T, sep=\"\\t\", dec=\".\")\n\n# Convert to matrix format\n\nmir <- as.matrix(mir)\nrna <- as.matrix(rna)\nprt <- as.matrix(prt)\n\n# Have a look at the data to see if it looks ok\n\nmir[1:4, 1:4]\n\n\n            OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nhsa-let-7a      -1.10330      0.40033     -0.65364      0.78277\nhsa-let-7a*     -0.58049     -0.72246      1.46023     -0.67980\nhsa-let-7b      -3.17134      0.41602     -0.13054      1.11872\nhsa-let-7c      -3.10923      0.27861     -0.17365      0.47395\n\n\nCode\nrna[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      1.60034     -0.49087     -0.26553     -0.27857\nANXA1     -2.42501     -0.05416     -0.46478     -2.18393\nAR         0.39615     -0.43348     -0.10232      0.58299\nBAK1       0.78627      0.39897      0.22598     -1.31202\n\n\nCode\nprt[1:4, 1:4]\n\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      0.48181     -0.76244      0.22878      0.02493\nANXA1     -0.37323      0.52558      0.73313     -1.60107\nAR         1.39394     -0.33711      0.07152      1.51886\nBAK1       1.44828      1.26768     -0.32807      1.41299"
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "A central problem in machine learning is how to make an algorithm perform well not just on the training data, but also on new inputs. Many strategies in machine learning are explicitly designed to reduce this test error, possibly at the expense of increased training error. These strategies are collectively known as regularisation and they are instrumental for good performance of any kind of prediction or classification model, especially in the context of small data (many features, few samples).\nWe will discuss basic connected concepts of generalisation, overfitting, bias-variance trade-off and regularisation and will illustrate the principles with penalised (generalised) linear regression models, with ridge, lasso and elastic net penalties as prominent examples.\nFinally, we will present the idea of structured penalties and priors, which can be tailored to account for structures present in the data, e.g. multi-modality or complex correlation structures. We will use examples from large-scale cancer pharmacogenomic screens, where penalised regression and alternative Bayesian approaches are used for predicting drug sensitivity and synergy based on the genomic characterisation of tumour samples.\nIn the hands-on tutorial we will use R to perform an integrated analysis of multi-omics data with penalised regression.\n\nContact\nManuela Zucknick: manuela.zucknick@medisin.uio.no\nChi Zhang: chi.zhang@medisin.uio.no"
+  },
+  {
+    "objectID": "part0_prep.html",
+    "href": "part0_prep.html",
+    "title": "Preparation",
+    "section": "",
+    "text": "Here are some preparation information for the participants."
+  },
+  {
+    "objectID": "index.html#room-python-room-2269-ole-johan-dahls-hus-ojd",
+    "href": "index.html#room-python-room-2269-ole-johan-dahls-hus-ojd",
+    "title": "Statistical Principles in Machine Learning for Small Biomedical Data",
+    "section": "Room: Python (room 2269), Ole-Johan Dahls hus (OJD)",
+    "text": "Room: Python (room 2269), Ole-Johan Dahls hus (OJD)"
+  },
+  {
+    "objectID": "part0_prep.html#software",
+    "href": "part0_prep.html#software",
+    "title": "Preparation",
+    "section": "Software",
+    "text": "Software\nIn this workshop we will be using R. You can either\n\nhave R and Rstudio installed on your laptop\nor, use Posit cloud (formerly Rstudio Cloud).\n\nPosit cloud is free of charge for personal users, yet you need to sign up for a new user account and have internet connection."
+  },
+  {
+    "objectID": "part0_prep.html#data",
+    "href": "part0_prep.html#data",
+    "title": "Preparation",
+    "section": "Data",
+    "text": "Data\nThe datasets we use can be found here."
+  },
+  {
+    "objectID": "part0_prep.html#code",
+    "href": "part0_prep.html#code",
+    "title": "Preparation",
+    "section": "Code",
+    "text": "Code\nThe R scripts used in part 1 and part 2 can be found here."
+  },
+  {
+    "objectID": "part0_prep.html#resources",
+    "href": "part0_prep.html#resources",
+    "title": "Preparation",
+    "section": "Resources",
+    "text": "Resources\nLecture notes link\nLab notes link\nAure 2015 Paper link"
   }
 ]

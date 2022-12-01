@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Oslo Bioinformatics Workshop - This is the website for the workshop</title>
+<title>Oslo Bioinformatics - Statistical Principles in Machine Learning for Small Biomedical Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Oslo Bioinformatics Workshop</span>
+    <span class="navbar-title">Oslo Bioinformatics</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -85,27 +85,75 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html">
- <span class="menu-text">Exploratory analysis</span></a>
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ocbe-uio/2022_bioinformatics_workshop"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Statistical Principles in Machine Learning for Small Biomedical Data</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part0_prep.html" class="sidebar-item-text sidebar-link">Preparation</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part1_eda.html" class="sidebar-item-text sidebar-link">Part 1: Exploratory analysis</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part2_model.html" class="sidebar-item-text sidebar-link">Part 2: Model</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">This is the website for the workshop</h1>
+<h1 class="title d-none d-lg-block">Statistical Principles in Machine Learning for Small Biomedical Data</h1>
 </div>
 
 
@@ -120,10 +168,64 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<p>Date: Tuesday 13 December 2022, 9:00-12:00</p>
+<p>Room: Python (room 2269), Ole-Johan Dahls hus (OJD)</p>
+<p>Instructors: Manuela Zucknick (main), Theophilus Asenso and Chi Zhang</p>
+<hr>
+<section id="welcome" class="level1">
+<h1>Welcome!</h1>
+<ul>
+<li>The goal of the workshop is to introduce kep concepts in machine learning, such as regularisation.</li>
+<li>The workshop is intended for students and researchers who are interested in applying machine learning methods to <strong>small data</strong> (few samples, but potentially many features) or <strong>noisy data</strong> (e.g.&nbsp;biomedical data)</li>
+<li>Workshop material can be found in the workshop <a href="https://github.com/ocbe-uio/2022_bioinformatics_workshop">github repository</a>.</li>
+</ul>
+<section id="learning-objectives" class="level4">
+<h4 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h4>
+<p>At the end of the tutorial, participants will be able to</p>
+<ul>
+<li>understand key concepts for training machine learning models such as regularisation;</li>
+<li>understand how to incorporate data structure in the regularisation process.</li>
+</ul>
+</section>
+<section id="pre-requisites" class="level4">
+<h4 class="anchored" data-anchor-id="pre-requisites">Pre-requisites</h4>
+<ul>
+<li>Basic familiarity with R</li>
+<li>Introductory level statistics, including regression</li>
+</ul>
+</section>
+</section>
+<section id="schedule" class="level1">
+<h1>Schedule</h1>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Time</th>
+<th style="text-align: center;">Topic</th>
+<th style="text-align: center;">Presenter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">9:00 - 10:00</td>
+<td style="text-align: center;"><a href="./part1_eda.html">Session 1: Introduction</a></td>
+<td style="text-align: center;">Manuela Zucknick</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10:15 - 11:00</td>
+<td style="text-align: center;"><a href="./part1_eda.html">Session 2: lab</a></td>
+<td style="text-align: center;">Manuela Zucknick</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11:15 - 12:00</td>
+<td style="text-align: center;"><a href="part2_eda.qmd">Session 3: lab</a></td>
+<td style="text-align: center;">Manuela Zucknick</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

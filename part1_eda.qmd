@@ -1,0 +1,37 @@
+---
+title: "Part 1: Exploratory analysis"
+format: 
+  html:
+    code-fold: true
+    code-tools: true
+editor: visual
+---
+
+## Part 1
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+
+```{r}
+#| label: try
+#| warning: false
+#| echo: true
+
+# Read the data
+
+mir <- read.table("lab/data/miRNA-421x282.txt", header=T, sep="\t", dec=".")
+rna <- read.table("lab/data/mRNA-100x282.txt", header=T, sep="\t", dec=".")
+prt <- read.table("lab/data/prot-100x282.txt", header=T, sep="\t", dec=".")
+
+# Convert to matrix format
+
+mir <- as.matrix(mir)
+rna <- as.matrix(rna)
+prt <- as.matrix(prt)
+
+# Have a look at the data to see if it looks ok
+
+mir[1:4, 1:4]
+rna[1:4, 1:4]
+prt[1:4, 1:4]
+```
