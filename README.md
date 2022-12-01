@@ -1,13 +1,11 @@
 # 2022 Bioinformatics Workshop
-Course materials for 2022 Oslo Bioinformatics Workshop
 
-#### Plan
+Course materials for 2022 Oslo Bioinformatics Workshop: Statistical Principles in Machine Learnning for Small Biomedical Data
 
-Check RStudio cloud teaching solutions (pre-installed packages as well)
+Date: Tuesday 13 December 2022, 9:00-12:00
 
-Think about a good way to organize the course site, if possible. 
+Room: Python (room 2269), Ole-Johan Dahls hus (OJD)
 
-Use Quarto site!
+Instructors: Manuela Zucknick (main), Theophilus Asenso and Chi Zhang
 
-Script with documentation
-
+Workshop website: https://ocbe-uio.github.io/2022_bioinformatics_workshop/ 
