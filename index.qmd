@@ -2,9 +2,9 @@
 title: "Statistical Principles in Machine Learning for Small Biomedical Data"
 ---
 
-Date: Tuesday 13 December 2022, 9:00-12:00
+Date: **Tuesday 13 December 2022, 9:00-12:00**
 
-Room: Python (room 2269), Ole-Johan Dahls hus (OJD)
+Room: **Python (room 2269), Ole-Johan Dahls hus (OJD)**
 
 Instructors: Manuela Zucknick (main), Theophilus Asenso and Chi Zhang
 
