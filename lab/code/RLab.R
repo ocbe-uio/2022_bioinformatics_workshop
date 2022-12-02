@@ -43,7 +43,7 @@ prt[1:4, 1:4]
 
 # Look at the overall distribution of expression values
 
-par(mfrow=c(2,2))
+par(mfrow=c(3,1))
 hist(mir, nclass=40, xlim=c(-5,5), col="lightblue")
 hist(rna, nclass=40, xlim=c(-5,5), col="lightblue")
 hist(prt, nclass=40, xlim=c(-5,5), col="lightblue")

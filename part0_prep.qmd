@@ -18,7 +18,7 @@ In this workshop we will be using R. You can either
 
 [Posit cloud](https://posit.cloud) is free of charge for personal users, yet you need to [sign up](https://posit.cloud/plans/free) for a new user account and have internet connection.
 
-The R package we are using is `glmnet`. 
+The R package we are using is `glmnet`.
 
 ## Data
 

@@ -38,8 +38,7 @@ rna.BRAF = rna[12,]
 mir.107 = mir[16,] 
 ```
 
-
-### (a) Linear regression model 
+### (a) Linear regression model
 
 on the log-scale, Aure et al. 2015, equation (3)
 
@@ -71,8 +70,7 @@ pairs(data.frame(mir.107, prt.BRAF, rna.BRAF),
 
 ```
 
-
-### (b) Lasso-penalised linear model 
+### (b) Lasso-penalised linear model
 
 with **all miRNAs** (Aure et al. 2015, equation (4))
 
@@ -114,10 +112,10 @@ as.matrix(coef(fitB, s=cvfit$lambda.min))["hsa-miR-107",]
 
 ```
 
-::: {.callout-note}
+::: callout-note
 ## Task 3
 
-Repeat the lasso analysis, but this time do not penalise the rna.BRAF variable together with the mir variables. 
+Repeat the lasso analysis, but this time do not penalise the `rna.BRAF` variable together with the mir variables.
 
-Check out the information on the penalty.factor option in ?glmnet to understand how.
+Check out the information on the `penalty.factor` option in `?glmnet` to understand how.
 :::
