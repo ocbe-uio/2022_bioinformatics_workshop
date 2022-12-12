@@ -16,9 +16,18 @@ In this workshop we will be using R. You can either
 -   have **R and Rstudio** installed on your laptop
 -   or, use **Posit cloud** (formerly Rstudio Cloud).
 
-[Posit cloud](https://posit.cloud) is free of charge for personal users, yet you need to [sign up](https://posit.cloud/plans/free) for a new user account and have internet connection.
+[Posit cloud](https://posit.cloud) is free of charge for personal users, yet you need to [sign up](https://posit.cloud/plans/free) for a new user account and have internet connection. Use this Posit cloud project: <https://rstudio.cloud/content/4877927>.
 
-The R package we are using is `glmnet`.
+**Note:** In the Posit cloud project, all required R code and data sets should already be available, and all required R packages are already installed. If you plan to use your own laptop and local RStudio setup, then you will need to download the data and R code and install
+
+## Required R packages
+
+The R package we are using is `glmnet`. Otherwise, we use base R packages which are already installed by default. We will also need R package `gclus` for one of the tasks (not essential for running other parts of the lab). You can install the packages by running the following code:
+
+```
+install.packages("glmnet")
+install.packages("gclus")
+```
 
 ## Data
 

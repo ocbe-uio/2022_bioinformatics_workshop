@@ -31,7 +31,7 @@ At the end of the tutorial, participants will be able to
 # Schedule
 
 |     Time      |                                Topic                                 |     Presenter     |
-|:-------------:|:--------------------------------------------------------------------:|:-----------------:|
+|:------------:|:-----------------------------------------:|:------------:|
 | 9:00 - 09:30  |       [Session 1: Regularisation and all that](part0_prep.qmd)       | Manuela Zucknick  |
 | 9:30 - 10:00  |                 [Session 2: R lab 1](part1_eda.qmd)                  | Manuela Zucknick  |
 | 10:15 - 10:45 |                 \[Session 3: Penalised regression\]                  | Manuela Zucknick  |

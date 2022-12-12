@@ -14,11 +14,14 @@
 # In addition, there are three extra tasks (TASK 1, TASK 2, TASK 3), where no R code
 # is provided. Please do these tasks when you have time available at the end of the lab.
 
-#setwd("<your project directory where the data files are>")
+# setwd("<your project directory where the data files are>")
 # getwd()
 proj_root <- rprojroot::find_rstudio_root_file()
 setwd(paste0(proj_root, '/lab/'))
 
+# Install R packages
+install.packages("glmnet")
+install.packages("gclus")
 
 # PART 1: EDA ----
 # Part 1: Exploratory analysis to understand the data.
