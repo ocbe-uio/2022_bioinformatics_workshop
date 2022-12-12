@@ -1,6 +1,6 @@
 # 2022 Bioinformatics Workshop
 
-Course materials for 2022 Oslo Bioinformatics Workshop: Statistical Principles in Machine Learnning for Small Biomedical Data
+Course materials for 2022 Oslo Bioinformatics Workshop: Statistical Principles in Machine Learning for Small Biomedical Data
 
 Date: Tuesday 13 December 2022, 9:00-12:00
 
