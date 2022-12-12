@@ -33,7 +33,8 @@ At the end of the tutorial, participants will be able to
 
 |     Time      |                  Topic                   |    Presenter     |
 |:-------------:|:-----------------------------------------:|:-------------:|
-| 9:00 - 10:00  | [Session 1: Introduction](part1_eda.qmd) | Manuela Zucknick |
-| 10:15 - 11:00 |     [Session 2: lab](part1_eda.qmd)      | Manuela Zucknick |
-| 11:15 - 12:00 |     [Session 3: lab](part2_eda.qmd)      | Manuela Zucknick |
+| 9:00 - 09:45  | [Session 1: Introduction: Regularisation and all that; R lab 1](part1_eda.qmd) | Manuela Zucknick |
+| 10:00 - 10:45  | [Session 3: Penalised regression](part2_eda.qmd) | Manuela Zucknick |
+| 11:00 - 11:30 |     [Session 4: R lab 2](part3_eda.qmd)      | Manuela Zucknick |
+| 11:30 - 12:00  | [Session 3: Outlook: Hierarchical models and structured penalties](part4_eda.qmd) | Theophilus Asenso|
 
