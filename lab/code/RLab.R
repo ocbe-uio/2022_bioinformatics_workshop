@@ -1,7 +1,8 @@
-# Course material for "Machine Learning in Medical Bioinformatics", 
-# May 03, 2022.
+# Course material for the Oslo Bioinformatics Workshop Week:
+# "Statistical Principles in Machine Learning for Small Biomedical Data"
+# December 13, 2022.
 # Computer Lab (with R): A Cancer Modeling Example.
-# See 3_StatPrinciples_RLab.pdf for some background info.
+# See StatPrinciples_RLab.pdf for some background info.
 
 # Exercise on analysis of miRNA, mRNA and protein data from the paper 
 # Aure et al, Integrated analysis reveals microRNA networks coordinately 
