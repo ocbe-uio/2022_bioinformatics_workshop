@@ -9,7 +9,7 @@ editor: visual
 
 ## A Cancer Modeling Example
 
-See `3_StatPrinciples_RLab.pdf` for some background info.
+See `StatPrinciples_RLab.pdf` for some background info.
 
 Exercise on analysis of miRNA, mRNA and protein data from the paper Aure et al, Integrated analysis reveals microRNA networks coordinately expressed with key proteins in breast cancer, Genome Medicine, 2015.
 
