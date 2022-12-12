@@ -8,8 +8,7 @@ Room: **Python (room 2269), Ole-Johan Dahls hus (OJD)**
 
 Instructors: Manuela Zucknick (main), Theophilus Asenso and Chi Zhang
 
-------------------
-
+------------------------------------------------------------------------
 
 # Welcome!
 
@@ -31,10 +30,10 @@ At the end of the tutorial, participants will be able to
 
 # Schedule
 
-|     Time      |                  Topic                   |    Presenter     |
-|:-------------:|:-----------------------------------------:|:-------------:|
-| 9:00 - 09:45  | [Session 1: Introduction: Regularisation and all that; R lab 1](part0_prep.qmd)(part1_eda.qmd) | Manuela Zucknick |
-| 10:00 - 10:45  | [Session 3: Penalised regression] | Manuela Zucknick |
-| 11:00 - 11:30 |     [Session 4: R lab 2](part2_model.qmd)      | Manuela Zucknick |
-| 11:30 - 12:00  | [Session 3: Outlook: Hierarchical models and structured penalties](part4_eda.qmd) | Theophilus Asenso|
-
+|     Time      |                                Topic                                 |     Presenter     |
+|:-------------:|:--------------------------------------------------------------------:|:-----------------:|
+| 9:00 - 09:30  |       [Session 1: Regularisation and all that](part0_prep.qmd)       | Manuela Zucknick  |
+| 9:30 - 10:00  |                 [Session 2: R lab 1](part1_eda.qmd)                  | Manuela Zucknick  |
+| 10:15 - 10:45 |                 \[Session 3: Penalised regression\]                  | Manuela Zucknick  |
+| 10:45 - 11:15 |                [Session 4: R lab 2](part2_model.qmd)                 | Manuela Zucknick  |
+| 11:30 - 12:00 | \[Session 3: Outlook: Hierarchical models and structured penalties\] | Theophilus Asenso |
