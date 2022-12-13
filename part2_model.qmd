@@ -109,7 +109,6 @@ Compare the regression coefficient of mir.107 from the models in (a) and (b):
 
 coef(fitA)["mir.107"]
 as.matrix(coef(fitB, s=cvfit$lambda.min))["hsa-miR-107",]
-
 ```
 
 ::: callout-note
