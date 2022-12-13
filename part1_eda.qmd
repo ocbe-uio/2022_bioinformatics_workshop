@@ -17,6 +17,19 @@ Please run the code provided to replicate some of the analyses in Aure et al. (2
 
 In addition, there are three extra tasks `Task 1`, `Task 2`, `Task 3`, where no R code is provided. Please do these tasks when you have time available at the end of the lab.
 
+### Install R packages
+
+```{r}
+#| label: install-packages
+#| warning: false
+#| echo: true
+#| eval: false
+
+install.packages("glmnet")
+install.packages("gclus")
+```
+
+
 ### Load the data
 
 Read the data, and convert to matrix format.
@@ -104,7 +117,9 @@ hist(RHO, col="lightblue")
 
 ## Visualize as heatmap
 
-Use the code provided to visualize the heatmap.
+Use the code provided to visualize the heatmap. 
+
+**Note:** If you get the error message `Error in plot.new() : figure margins too large`, try to increase the *Plots* panel in your RStudio workspace. 
 
 ```{r}
 #| echo: true
